@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "Lists"
+tags:   lists
+date:   2014-02-21 08:45:00
+---
+
+## Lists
+
+Lists are implemented as linked lists. They differ from tuples in that tuples are stored
+contiguously in memory, and are therefore able to access elements in constant time. Updating
+a tuple requires a copy of the entire tuple's data. Lists however are very cheap when adding
+or removing elements, but require traversal of the list to reach a given element. Lists, like
+tuples, can contain values of any type.
+
+{% highlight elixir %}
+iex> [1, 2, 3]
+[1, 2, 3]
+iex> [:stuff, 1, "things"]
+[:stuff, 2, "things"]
+{% endhighlight %}
+
+Lists can be pattern matched:
+
+{% highlight elixir %}
+iex> [_, two, _] = [1, 2, 3]
+[1, 2, 3]
+iex> two
+2
+iex> [head | tail] = [1, 2, 3, 4]
+[1, 2, 3, 4]
+iex> head
+1
+iex> tail
+[2, 3, 4]
+{% endhighlight %}
+
+You can concatenate lists:
+
+{% highlight elixir %}
+iex> [1, 2, 3] ++ [4, 5, 6]
+[1, 2, 3, 4, 5, 6]
+{% endhighlight %}
+
+You can get the difference of two lists:
+
+{% highlight elixir %}
+iex> [1, 2, 3, 4] -- [3, 4]
+[1, 2]
+{% endhighlight %}
+
+You can test for membership in a list:
+
+{% highlight elixir %}
+iex> 2 in [1, 2, 3, 4]
+true
+{% endhighlight %}
+
+There are many operations that the List module provides, a few of them you might recognize:
+
+{% highlight elixir %}
+iex> List.flatten [1, [2, 3], 4]
+[1, 2, 3, 4]
+iex> List.zip [[1, 2, 3], [4, 5, 6]]
+[{1, 4}, {2, 5}, {3, 6}]
+iex> List.foldl [1, 2, 3], 0, fn num, acc -> num + acc end
+6
+{% endhighlight %}
+
+To see all operations provided by the List module, [see the docs](http://elixir-lang.org/docs/master/List.html).
+The [Enum module](http://elixir-lang.org/docs/master/Enum.html) also provides a richer and more general operations 
+for any collection type in Elixir. This will be looked at in greater detail in a later example.

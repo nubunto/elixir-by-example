@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "Tuples"
+tags:   tuples
+date:   2014-02-21 08:30:00
+---
+
+## Tuples
+
+Tuples are an ordered collection of values. They can be of any type (like all Elixir collections).
+
+{% highlight elixir %}
+iex> {:stuff, 1, "things"}
+{:stuff, 1, "things"}
+{% endhighlight %}
+
+They can be used in pattern matching (covered in more detail in a later example):
+
+{% highlight elixir %}
+iex> {stuff, num, _} = {:stuff, 1, "things"}
+{:stuff, 1, "things"}
+iex> stuff
+:stuff
+iex> num
+1
+{% endhighlight %}
+
+Tuples are often used in Elixir when performing some action which could fail:
+
+{% highlight elixir %}
+iex> {status, handle} = File.open("example.txt")
+{:ok, #PID<0.43.0>}
+{% endhighlight %}
+
+Combined with pattern matching, you can assert the result of an operation, which will throw an error if
+the result does not match the pattern specified:
+
+{% highlight elixir %}
+iex> {:ok, handle} = File.open("doesntexist.txt")
+** (MatchError) no match of right hand side value: {:error, :enoent}
+{% endhighlight %}
+
+This pattern is common, and is extremely useful.
