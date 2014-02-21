@@ -39,3 +39,7 @@ This work is copyright Jason Stiebs and licensed under a
 Thanks to [Mark McGranaghan](https://github.com/mmcgrana/)
 for [Go by Example](https://github.com/mmcgrana/gobyexample), which
   I shameless copied for this project.
+
+### Contributors
+
+Paul Schoenfelder aka [bitwalker](https://github.com/bitwalker)
