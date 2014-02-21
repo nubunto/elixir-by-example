@@ -1,0 +1,7 @@
+name: Elixir by Example
+safe: true
+lsi: false
+markdown: redcarpet
+pygments: true
+permalink: /:title
+baseurl: /elixir-by-example
