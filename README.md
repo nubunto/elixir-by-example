@@ -1,6 +1,6 @@
 ## Elixir by Example
 
-Content for [Elixir by Example](https://elixir-by-example.github.com).
+Content for [Elixir by Example](http://jeregrine.github.io/elixir-by-example/).
 
 
 ### Overview
