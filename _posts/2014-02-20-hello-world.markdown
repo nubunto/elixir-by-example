@@ -5,26 +5,29 @@ tags: hello world
 date:   2014-02-20 17:34:40
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+Our first example will print the classic "hello world" message. First we'll need to open up the Elixir interactive mode. 
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight elixir %}
-defmodule Hello do
-  IO.puts "Defining the function world"
-
-  def world do
-    IO.puts "Hello World"
-  end
-
-  IO.puts "Function world defined"
-end
-
-Hello.world
+{% highlight console %}
+$ iex
+iex>
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+The `iex>` is what lets us know we are running in Elixir's Interactive Mode. It accepts valid Elixir code only. 
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+{% highlight elixir %}
+iex> "hello world"
+hello world
+{% endhighlight %}
+
+In Elixir everything is an expression so our string "hello world" evaluated to its text. If we want to output something to the console we'd use it like so.
+
+{% highlight elixir %}
+iex> IO.puts "hello world"
+hello world
+:ok
+iex>
+{% endhighlight %}
+
+Here we've printed out "hello world" and we also got a symble `:ok`, we won't got into what or why that is for now but just know thats ok! 
+
+If we wanted to close out of `iex` we'll need to type the command `ctrl+c` twice. Now that we can execute and run basic elixir code lets continue.
