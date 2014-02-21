@@ -20,6 +20,8 @@ To build continuously in a loop:
 jekyll serve --watch --baseurl ''
 ```
 
+Then navigate to `http://localhost:4000` to view!
+
 ### Contributing
 
 1. Fork this repository
