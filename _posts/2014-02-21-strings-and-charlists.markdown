@@ -45,6 +45,7 @@ iex> IO.puts """
 ...>     quotes to the body of your text. You
 ...>     can "double" and 'single' quote
 ...>     inside them without escaping.
+...> """
 This is a heredoc, you can control
 the margin by aligning the trailing
 quotes to the body of your text.
