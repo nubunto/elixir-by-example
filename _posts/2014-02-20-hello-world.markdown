@@ -28,6 +28,6 @@ hello world
 iex>
 {% endhighlight %}
 
-Here we've printed out "hello world" and we also got a symble `:ok`, we won't got into what or why that is for now but just know thats ok! 
+Here we've printed out "hello world" and we also got a symbol `:ok`, we won't got into what or why that is for now but just know thats ok! 
 
 If we wanted to close out of `iex` we'll need to type the command `ctrl+c` twice. Now that we can execute and run basic elixir code lets continue.
